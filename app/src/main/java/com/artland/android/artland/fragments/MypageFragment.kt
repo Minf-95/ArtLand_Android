@@ -33,7 +33,7 @@ class MypageFragment:Fragment() {
 
 
 
-        //Menu버튼을 누르면 설정 창이 나온다.
+        //Menu버튼을 누르면 설정 창이 나온다....
         mBinding!!.mypageMenuBtn.setOnClickListener {
             mBinding!!.mypageDrawer.openDrawer(GravityCompat.END)
         }
