@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <!--어디를 먼저 시작할거냐-->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.artland.android.artland.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/mypageFragment"
+        android:name="com.artland.android.artland.fragments.MypageFragment"
+        android:label="fragment_friends"
+        tools:layout="@layout/fragment_mypage" />
+</navigation>

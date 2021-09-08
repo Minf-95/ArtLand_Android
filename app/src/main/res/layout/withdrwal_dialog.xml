@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/withdrwal_dialog_border">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquareroundeb"
+            android:text="회원 탈퇴"
+            android:textColor="#6774FF"
+            android:textSize="18dp"
+            android:layout_marginTop="15dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquareroundb"
+            android:gravity="center"
+            android:text="회원 탈퇴 시, 모든 데이터가 삭제됩니다.\n계속 진행하시겠습니까?"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="70dp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/withdrwal_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/nanumsquareroundb"
+                    android:textColor="#000000"
+                    android:gravity="center"
+                    android:text="취소"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/withdrwal_apply"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/nanumsquareroundb"
+                    android:gravity="center"
+                    android:textColor="#FF7088"
+                    android:text="삭제"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
