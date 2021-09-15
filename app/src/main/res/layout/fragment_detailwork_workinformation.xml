@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DFDFDF"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout_detailWorkWorkInformation_workNameContainer"
+        />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_detailWorkWorkInformation_workNameContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquareroundeb"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:text="작품명"/>
+
+        <TextView
+            android:id="@+id/textView_detailWorkWorkInformation_workName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquareroundeb"
+            android:textColor="#000000"
+            android:layout_marginLeft="30dp"
+            android:textSize="15sp"
+            android:text="흰색의 미"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_detailWorkWorkInformation_workOwnerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_detailWorkWorkInformation_workNameContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquareroundeb"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:text="소유자"/>
+
+        <TextView
+            android:id="@+id/textView_detailWorkWorkInformation_workOwner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquareroundeb"
+            android:textColor="#000000"
+            android:layout_marginLeft="30dp"
+            android:textSize="15sp"
+            android:text="홍길동"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_detailWorkWorkInformation_workProducerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_detailWorkWorkInformation_workOwnerContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquareroundeb"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:text="제작자"/>
+
+        <TextView
+            android:id="@+id/textView_detailWorkWorkInformation_workProducer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquareroundeb"
+            android:textColor="#000000"
+            android:layout_marginLeft="30dp"
+            android:textSize="15sp"
+            android:text="김작가"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_detailWorkWorkInformation_workLftTokenValueContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_detailWorkWorkInformation_workProducerContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquareroundeb"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:text="발행 토큰 값"/>
+
+        <TextView
+            android:id="@+id/textView_detailWorkWorkInformation_workLftTokenValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquareroundeb"
+            android:textColor="#000000"
+            android:layout_marginLeft="30dp"
+            android:textSize="15sp"
+            android:text="abkdnvdjfkdk"/>
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/view_detailWorkWorkInformation_border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DFDFDF"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_detailWorkWorkInformation_workLftTokenValueContainer"
+        />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_detailWorkWorkInformation_border"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout_detailWorkWorkInformation_bottomBtnContainer"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquareroundb"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:lineSpacingMultiplier="1.4"
+            android:text=" 가슴에 우리의 얼마나 하여도 이상을 것은 사막이다. 같지 실현에 하였으며, 이것이야말로 이상의 것은 얼마나 무엇을 부패뿐이다. 풍부하게 끓는 바이며, 끓는다. \n\n
+ 설산에서 사랑의 발휘하기 현저하게 청춘의 것이다. 따뜻한 품고 꽃 있을 목숨을 힘차게 때문이다. 그들의 안고, 굳세게 말이다. 남는 곳으로 인생을 대중을 공자는 천지는 타오르고 심장은 이 칼이다.\n\n
+ 같은 사랑의 곳으로 그들에게 무엇이 싹이 웅대한 크고 동산에는 봄바람이다. 영락과 맺어, 것은 아니다. 거선의 위하여서 이 봄바람이다."/>
+    </ScrollView>
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout_detailWorkWorkInformation_bottomBtnContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+            <TextView
+                android:id="@+id/textView_detailWorkWorkInformation_workEdit"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/nomal_btn_border"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/nanumsquareroundeb"
+                android:gravity="center"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView_detailWorkWorkInformation_workRemove"
+                android:text="수정하기"/>
+
+            <TextView
+                android:id="@+id/textView_detailWorkWorkInformation_workRemove"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/nomal_btn_border"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/nanumsquareroundeb"
+                android:gravity="center"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView_detailWorkWorkInformation_workEdit"
+                android:text="삭제하기"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

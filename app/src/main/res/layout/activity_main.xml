@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:orientation="vertical"
     android:weightSum="1"
-    >
+    tools:context=".MainActivity">
 
     <!--    이게 네비게이션 호스트 프래그먼트들이 보여질 컨테이너뷰
     이 네비게이션 컨테이너는
@@ -24,16 +23,14 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        app:defaultNavHost ="true"
-        app:navGraph="@navigation/nav_graph"
-        />
-
+        app:navGraph="@navigation/nav_graph" />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout_mainPage_bottomMenuContainer"
         android:layout_width="match_parent"
-        android:layout_marginTop="-35dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-35dp">
 
         <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
@@ -56,7 +53,6 @@
                 app:menu="@menu/bottom_nav_menu" />
 
 
-
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/main_fab"
                 android:layout_width="wrap_content"
@@ -65,22 +61,22 @@
                 android:backgroundTint="#6774FF"
                 android:elevation="10dp"
                 android:src="@drawable/ic_plus"
-                app:tint="@null"
                 app:borderWidth="0dp"
                 app:elevation="5dp"
                 app:fabCustomSize="52dp"
                 app:layout_anchor="@id/my_bottom_nav"
                 app:layout_anchorGravity="center_horizontal|center"
-                app:maxImageSize="36dp" />
+                app:maxImageSize="36dp"
+                app:tint="@null" />
 
             <View
+                android:id="@+id/view_mainPage_bottomBorderLine"
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
-                android:background="#c4c4c4"
                 android:layout_marginBottom="47dp"
+                android:background="#c4c4c4"
                 app:layout_anchor="@id/my_bottom_nav"
-                app:layout_anchorGravity="center_horizontal|center"
-                />
+                app:layout_anchorGravity="center_horizontal|center" />
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

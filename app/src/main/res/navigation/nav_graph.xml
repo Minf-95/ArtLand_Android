@@ -14,5 +14,90 @@
         android:id="@+id/mypageFragment"
         android:name="com.artland.android.artland.fragments.MypageFragment"
         android:label="fragment_friends"
-        tools:layout="@layout/fragment_mypage" />
+        tools:layout="@layout/fragment_mypage" >
+        <action
+            android:id="@+id/action_mypageFragment_to_mypage_ArtLandTermOfUse_Fragment"
+            app:destination="@id/mypage_ArtLandTermOfUse_Fragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            />
+        <action
+            android:id="@+id/action_mypageFragment_to_mypage_ArtLandPrivacyAgree_Fragment"
+            app:destination="@id/mypage_ArtLandPrivacyAgree_Fragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            />
+        <action
+            android:id="@+id/action_mypageFragment_to_mypage_TransactionHistory_Fragment"
+            app:destination="@id/mypage_TransactionHistory_Fragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            />
+        <action
+            android:id="@+id/action_mypageFragment_to_mypage_ArtLandVersionInformation_Fragment"
+            app:destination="@id/mypage_ArtLandVersionInformation_Fragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/mypage_ArtLandTermOfUse_Fragment"
+        android:name="com.artland.android.artland.fragments.Mypage_ArtLandTermOfUse_Fragment"
+        android:label="fragment_mypage_artlandtermofuse"
+        tools:layout="@layout/fragment_mypage_artlandtermofuse" >
+        <action
+            android:id="@+id/action_mypage_ArtLandTermOfUse_Fragment_to_mypageFragment"
+            app:destination="@id/mypageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mypage_ArtLandPrivacyAgree_Fragment"
+        android:name="com.artland.android.artland.fragments.Mypage_ArtLandPrivacyAgree_Fragment"
+        android:label="fragment_mypage_artlandprivacyagree"
+        tools:layout="@layout/fragment_mypage_artlandprivacyagree" >
+        <action
+            android:id="@+id/action_mypage_ArtLandPrivacyAgree_Fragment_to_mypageFragment"
+            app:destination="@id/mypageFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/mypage_TransactionHistory_Fragment"
+        android:name="com.artland.android.artland.fragments.Mypage_TransactionHistory_Fragment"
+        android:label="fragment_mypage_transactionhistory"
+        tools:layout="@layout/fragment_mypage_transactionhistory" >
+        <action
+            android:id="@+id/action_mypage_TransactionHistory_Fragment_to_mypageFragment"
+            app:destination="@id/mypageFragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/mypage_ArtLandVersionInformation_Fragment"
+        android:name="com.artland.android.artland.fragments.Mypage_ArtLandVersionInformation_Fragment"
+        android:label="fragment_mypage_artlandversioninformation"
+        tools:layout="@layout/fragment_mypage_artlandversioninformation" >
+        <action
+            android:id="@+id/action_mypage_ArtLandVersionInformation_Fragment_to_mypageFragment"
+            app:destination="@id/mypageFragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+
+            />
+    </fragment>
 </navigation>

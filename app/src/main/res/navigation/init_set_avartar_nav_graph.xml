@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/init_set_avartar_nav_graph"
+    app:startDestination="@id/initSetAvartar_Gender_Fragment">
+
+    <fragment
+        android:id="@+id/initSetAvartar_Gender_Fragment"
+        android:name="com.artland.android.artland.fragments.InitSetAvartar_Gender_Fragment"
+        android:label="fragment_initsetavartar_gender"
+        tools:layout="@layout/fragment_initsetavartar_gender"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+
+        >
+        <action
+            android:id="@+id/action_initSetAvartar_Gender_Fragment_to_initSetAvartar_Avartar_Fragment"
+            app:destination="@id/initSetAvartar_Avartar_Fragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_initSetAvartar_Gender_Fragment_to_loginActivity"
+            app:destination="@id/loginActivity" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/initSetAvartar_Avartar_Fragment"
+        android:name="com.artland.android.artland.fragments.InitSetAvartar_Avartar_Fragment"
+        android:label="fragment_initsetavartar_avartar"
+        tools:layout="@layout/fragment_initsetavartar_avartar"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left">
+        <action
+            android:id="@+id/action_initSetAvartar_Avartar_Fragment_to_initSetAvartar_Nickname_Fragment"
+            app:destination="@id/initSetAvartar_Nickname_Fragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_initSetAvartar_Avartar_Fragment_to_initSetAvartar_Gender_Fragment"
+            app:destination="@id/initSetAvartar_Gender_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/initSetAvartar_Nickname_Fragment"
+        android:name="com.artland.android.artland.fragments.InitSetAvartar_Nickname_Fragment"
+        android:label="fragment_initsetavartar_nickname"
+        tools:layout="@layout/fragment_initsetavartar_nickname" >
+        <action
+            android:id="@+id/action_initSetAvartar_Nickname_Fragment_to_initSetAvartar_Avartar_Fragment"
+            app:destination="@id/initSetAvartar_Avartar_Fragment" />
+        <action
+            android:id="@+id/action_initSetAvartar_Nickname_Fragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.artland.android.artland.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.artland.android.artland.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+</navigation>

@@ -52,7 +52,7 @@ class LoginActivity : AppCompatActivity() {
                 Log.e(TAG, "로그인 실패", error)
             } else if (token != null) {
                 Log.i(TAG, "로그인 성공 ${token.accessToken}")
-                val startMainIntent = Intent(getApplicationContext(), MainActivity::class.java)
+                val startMainIntent = Intent(getApplicationContext(), TermsofUseActivity::class.java)
                 startActivity(startMainIntent)
             }
         }
@@ -64,11 +64,11 @@ class LoginActivity : AppCompatActivity() {
     Token값이 있을 시 로그인
      */
     fun kakaoApiLoginTokenCallback(){
-//        // 로그인 정보 확인 (토큰 값이 있으면 자동 로그인) Splash 화면에 이용
+        // 로그인 정보 확인 (토큰 값이 있으면 자동 로그인) Splash 화면에 이용
 //        UserApiClient.instance.accessTokenInfo { tokenInfo, error ->
 //            if (error != null) {
 //                Log.d(TAG+ " kakaoApiLoginTokenCallback","토큰 정보 보기 실패")
-//                Toast.makeText(this, "토큰 정보 보기 실패", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this, "회원가입을 해주세요.", Toast.LENGTH_SHORT).show()
 //            }
 //            else if (tokenInfo != null) {
 //                Log.d(TAG+ " kakaoApiLoginTokenCallback","토큰 정보 보기 성공")
@@ -82,6 +82,7 @@ class LoginActivity : AppCompatActivity() {
         // 로그인 공통 callback 구성
         val callback: (OAuthToken?, Throwable?) -> Unit = { token, error ->
             if (error != null) {
+                Log.d(TAG+ "loginCallback", error.toString())
                 when {
                     error.toString() == AuthErrorCause.AccessDenied.toString() -> {
                         Toast.makeText(this, "접근이 거부 됨(동의 취소)", Toast.LENGTH_SHORT).show()
@@ -120,8 +121,6 @@ class LoginActivity : AppCompatActivity() {
                 finish()
             }
         } //callback
-
-
 
 
         // 카카오톡이 설치되어 있으면 카카오톡으로 로그인, 아니면 카카오계정으로 로그인
